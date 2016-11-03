@@ -14,9 +14,24 @@ Volumes: By default, docker-compose will create a ~/.keys directory with the hos
 
 Passwords: Change the mysql root and user passwords to something other than the default passwords.  Make sure that MYSQL_PASSWORD and WORDPRESS_DB_PASSWORD are the same password as they are referring to the same thing.
 
+#### Build & Run!
+
 ```
-$ docker-compose up -d
+docker-compose build
+docker-compose up -d
 ```
+you can now start writing your app!
+
+
+#### Stop and remove
+
+```
+docker-compose down
+```
+
+
+
+
 #### What's my .onion url?
 
 Your new .onion hostname will be in ~/.keys/wordpress/hostname or you can run the following command:
