@@ -24,7 +24,7 @@ Dockerfile uses ubuntu:latest and installs a list of packages including apache2,
 
 #### Variables
 
-Volumes: In the tor section, docker-compose will create a ~/.keys directory with the hostname and private key.  In the apache section, it create ~/www which links to /var/www/html in the apache container. You can change these local directory whatever you want.
+Volumes: In the tor section, docker-compose will create a ~/.keys directory with the hostname and private key.  In the apache section, it create ~/www which links to /var/www/html in the apache container. By default you will not be able to write to this directory. Use chmod to change permissions to something that you can use. You can change this local directory to whatever you want.
 
 Passwords: **Change all passwords to something other than the default passwords!** I included a basic starter database in the configuration to ease in setting up something like wordpress or whatever.
 
