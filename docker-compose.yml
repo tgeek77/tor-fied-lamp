@@ -5,30 +5,25 @@ services:
      image: goldy/tor-hidden-service:latest
      links:
           - apache
-
-# Keep keys in volumes
      volumes:
           - "~/.keys/:/var/lib/tor/hidden_service/"
      environment:
-        # Set mapping ports
-         APACHE_PORTS: "80:80"
+                 APACHE_PORTS: "80:80"
   db:
      image: mariadb
      restart: always
      environment:
          MYSQL_ROOT_PASSWORD: rootpass
-         MYSQL_DATABASE: wordpress
-         MYSQL_USER: wordpress
-         MYSQL_PASSWORD: wordpress123
+         MYSQL_DATABASE: myproject
+         MYSQL_USER: userid
+         MYSQL_PASSWORD: myproject123
 
   apache:
      depends_on:
           - db
-#     image: php:latest
      build: .
      links:
           - db:db
      restart: always
      volumes:
           - "~/www/:/var/www/html/"
-
