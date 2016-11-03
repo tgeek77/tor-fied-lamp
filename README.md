@@ -47,7 +47,7 @@ docker-compose down
 Your new .onion hostname will be in ~/.keys/wordpress/hostname or you can run the following command:
 
 ```
-$ docker exec -ti torfiedwordpress_tor_1 onions
+$ docker exec -ti torfiedlamp_tor_1 onions
 ```
 
 #### Setting up LAMP applications
