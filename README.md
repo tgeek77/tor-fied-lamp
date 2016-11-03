@@ -17,7 +17,7 @@ docker-compose.yml calls on three image:
   <dd>db uses the official mariadb image from http://hub.docker.com</dd>
 
   <dt>apache</dt>
-  <dd>apache is my own image that is build but the attached dockerfile.</dd>
+  <dd>apache is my own image that is build by the attached dockerfile.</dd>
 </dl>
 
 Dockerfile uses ubuntu:latest and installs a list of packages including apache2, php, and some standard dependancies. The list of packages can be changed or added to as needed for your own personal needs.
@@ -52,9 +52,9 @@ $ docker exec -ti torfiedwordpress_tor_1 onions
 
 #### Setting up LAMP applications
 
-I have successfully install Joomla, Wordpress, and phpMyAdmin using this project.
+I have successfully install Joomla, Wordpress, Koken, and phpMyAdmin using this project.
 
-Joomla and Wordpress (and others) -- the database located should not be localhost, instead it should be "db" as that is how you can connect to the remote database container.
+Joomla, Wordpress, etc. -- the database located should not be localhost, instead it should be "db" as that is how you can connect to the remote database container.
 
 phpMyAdmin -- download and install the file from https://www.phpmyadmin.net/. Rename config.sample.inc.php to config.inc.php and make the following change:
 
