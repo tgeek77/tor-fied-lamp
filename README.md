@@ -7,7 +7,7 @@ These are docker-compose and dockerfile scripts for creating a simple vanilla la
 
 #### About the scripts:
 
-docker-compose.yml calls on three image:
+docker-compose.yml calls on three images:
 
 <dl>
   <dt>tor</dt>
