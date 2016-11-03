@@ -34,7 +34,7 @@ Passwords: **Change all passwords to something other than the default passwords!
 docker-compose build
 docker-compose up -d
 ```
-you can now start writing your app!
+you can now start running your app!
 
 #### Stop and remove
 
