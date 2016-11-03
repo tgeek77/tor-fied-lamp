@@ -5,17 +5,20 @@ These are docker-compose and dockerfile scripts for creating a simple vanilla la
 
 #### Special thanks to [cmehay](https://github.com/cmehay/docker-tor-hidden-service) for their projects which allowed me to build this one.
 
-### About the scripts:
+#### About the scripts:
 
 docker-compose.yml calls on three image:
 
-* tor
-* db
-* apache
+<dl>
+  <dt>tor</dt>
+  <dd>tor is the [cmehay's](https://github.com/cmehay/docker-tor-hidden-service) docker images which published the lamp stack as a .onion website.</dd>
 
-tor is the [cmehay's](https://github.com/cmehay/docker-tor-hidden-service) docker images which published the lamp stack as a .onion website.
-db uses the official mariadb image from http://hub.docker.com
-apache is my own image that is build but the attached dockerfile.
+  <dt>db</dt>
+  <dd>db uses the official mariadb image from http://hub.docker.com</dd>
+
+  <dt>apache</dt>
+  <dd>apache is my own image that is build but the attached dockerfile.</dd>
+</dl>
 
 Dockerfile uses ubuntu:latest and installs a list of packages including apache2, php, and some standard dependancies. The list of packages can be changed or added to as needed for your own personal needs.
 
@@ -49,4 +52,20 @@ $ docker exec -ti torfiedwordpress_tor_1 onions
 
 #### Setting up LAMP applications
 
-I have successfully
+I have successfully install Joomla, Wordpress, and phpMyAdmin using this project.
+
+Joomla and Wordpress (and others) -- the database located should not be localhost, instead it should be "db" as that is how you can connect to the remote database container.
+
+phpMyAdmin -- download and install the file from https://www.phpmyadmin.net/. Rename config.sample.inc.php to config.inc.php and make the following change:
+
+```
+$cfg['Servers'][$i]['host'] = 'localhost';
+```
+
+Should be changed to:
+
+```
+$cfg['Servers'][$i]['host'] = 'db';
+```
+
+You can then run phpMyAdmin using the mariadb root and password settings from docker-compose.yml
