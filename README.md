@@ -54,7 +54,7 @@ $ docker exec -ti torfiedlamp_tor_1 onions
 
 I have successfully install Joomla, Wordpress, Koken, and phpMyAdmin using this project.
 
-Joomla, Wordpress, etc. -- the database located should not be localhost, instead it should be "db" as that is how you can connect to the remote database container.
+Joomla, Wordpress, etc. -- the database location should not be "localhost", instead it should be "db" as that is how you can connect to the remote database container.
 
 phpMyAdmin -- download and install the file from https://www.phpmyadmin.net/. Rename config.sample.inc.php to config.inc.php and make the following change:
 
