@@ -11,7 +11,7 @@ docker-compose.yml calls on three image:
 
 <dl>
   <dt>tor</dt>
-  <dd>tor is the [cmehay's](https://github.com/cmehay/docker-tor-hidden-service) docker images which published the lamp stack as a .onion website.</dd>
+  <dd>tor is the docker images which published the lamp stack as a .onion website.</dd>
 
   <dt>db</dt>
   <dd>db uses the official mariadb image from http://hub.docker.com</dd>
